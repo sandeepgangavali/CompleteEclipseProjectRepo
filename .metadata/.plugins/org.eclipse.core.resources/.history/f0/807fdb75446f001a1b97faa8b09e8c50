@@ -1,0 +1,62 @@
+package com.stackroute.moviecruiserapp.repository;
+
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.junit4.SpringRunner;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
+
+import com.stackroute.moviecruiserapp.domain.Movie;
+
+
+public class MovieRepositoryTest {
+	
+	 @Mock
+	    MovieRepository movieRepository;
+	 
+	 
+	    Movie movie;
+	    List<Movie> list= null;
+
+	    @Before
+	    public void setUp()
+	    {
+	    	MockitoAnnotations.initMocks(this);
+	        movie = new Movie("12","KGF","Superhit",9,"wwww.kgf","awesome","itcuser");
+	        list = new ArrayList<>();
+	        list.add(movie);
+	    } 
+	    
+	    
+	    @After
+	    public void tearDown(){
+
+	    	movieRepository.deleteAll();
+	    }
+	    
+	    
+	    
+	    @Test
+	    public void testSaveUser(){
+	    	movieRepository.save(movie);
+	    	List<Movie> fetchUser =movieRepository.findByUsername(anyString());
+	        Assert.assertEquals("KGF",fetchUser.get(0).getTitle());
+
+	    }
+	    
+
+
+	    
+}

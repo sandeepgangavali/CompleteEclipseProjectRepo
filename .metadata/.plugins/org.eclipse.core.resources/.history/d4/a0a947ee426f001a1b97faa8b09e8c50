@@ -1,0 +1,64 @@
+package com.stackroute.moviecruiserapp.repository;
+
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.when;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import com.stackroute.moviecruiserapp.domain.Movie;
+import com.stackroute.moviecruiserapp.repository.MovieRepository;
+
+import junit.framework.Assert;
+
+@RunWith(SpringRunner.class)
+@DataJpaTest
+public class MovieRepositoryTest {
+	
+	 @Autowired
+	 MovieRepository movieRepository;
+	 
+	 
+	    Movie movie;
+	    List<Movie> list= null;
+
+	    @Before
+	    public void setUp()
+	    {
+	    	MockitoAnnotations.initMocks(this);
+	        movie = new Movie("12","KGF","Superhit",9,"wwww.kgf","awesome","itcuser");
+	        list = new ArrayList<>();
+	        list.add(movie);
+	    } 
+	    
+	    
+	    @After
+	    public void tearDown(){
+
+	    	movieRepository.deleteAll();
+	    }
+	    
+	    @Test
+	    public void testGetAllMovie(){
+	        Movie movie1 = new Movie("12","KGF","Superhit",9,"wwww.kgf","awesome","itcuser");;
+	        Movie movie2 = new Movie("13","KGF2","Superhit",9,"wwww.kgf","awesome","itcuser");;
+	        movieRepository.save(movie);
+	        
+
+//
+	    }
+
+	    
+}

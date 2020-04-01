@@ -1,0 +1,34 @@
+package com.moviecruiser.AuthenticationService.models;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
+@Entity
+public class AuthenticationRequest {
+
+	@Id
+//	@GeneratedValue(strategy = GenerationType.AUTO)
+	private String id;
+
+	private String username;
+
+	private String password;
+
+
+	public AuthenticationRequest(String id, String username, String password) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.password = password;
+	}
+
+	@Override
+	public String toString() {
+		return "AuthenticationRequest [id=" + id + ", username=" + username + ", password=" + password + "]";
+	}
+
+}

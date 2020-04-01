@@ -1,0 +1,28 @@
+
+t	java:S125#"<This block of commented-out lines of code should be removed.(¬¤øæùÿÿÿÿ8Œ™’¿.H¨íRMAJORZ
+CODE_SMELL
+w
+java:S44889"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(¦¬‹éH²íRMINORZ
+CODE_SMELL
+V
+java:S1452:"&Remove usage of generic wildcard type.(©Ÿ¥˜H¯íRCRITICALZ
+CODE_SMELL
+w	java:S112)"FDefine and throw a dedicated exception instead of using a generic one.(èİÎÑşÿÿÿÿHªíRMAJORZ
+CODE_SMELL
+‹	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ï‘ùÿÿÿÿÿH«íRMINORZ
+CODE_SMELL
+w	java:S112."FDefine and throw a dedicated exception instead of using a generic one.(ú‰ÎĞşÿÿÿÿH¬íRMAJORZ
+CODE_SMELL
+x
+java:S4684("@Replace this persistent entity with a simple POJO or DTO object.(‘’ÿÿÿÿÿH°íRCRITICALZVULNERABILITY
+s
+java:S4684:"@Replace this persistent entity with a simple POJO or DTO object.(©Ÿ¥˜H®íRCRITICALZVULNERABILITY
+[
+java:S1452("&Remove usage of generic wildcard type.(‘’ÿÿÿÿÿH±íRCRITICALZ
+CODE_SMELL
+“
+java:S1488="fImmediately return this expression instead of assigning it to the temporary variable "responseEntity".(í¬üH­íRMINORZ
+CODE_SMELL
+|
+java:S4488'"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(¶€»²ùÿÿÿÿH©íRMINORZ
+CODE_SMELL

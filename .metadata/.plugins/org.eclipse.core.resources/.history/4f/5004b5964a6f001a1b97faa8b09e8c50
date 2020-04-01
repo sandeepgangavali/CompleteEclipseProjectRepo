@@ -1,0 +1,101 @@
+package com.stackroute.moviecruiserapp.controller;
+
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.ArgumentMatchers.any;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.ResultActions;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.stackroute.moviecruiserapp.domain.Movie;
+import com.stackroute.moviecruiserapp.service.MovieService;
+import com.stackroute.moviecruiserapp.util.ValidateMethodUtil;
+
+
+
+@RunWith(SpringRunner.class)
+@WebMvcTest(value = MovieController.class)
+@AutoConfigureMockMvc
+public class MovieControllerTest<when> {
+	
+	private String token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUaW0xMjMiLCJpYXQiOjE1NTkxMjgzNjN9.BVQUb06etlsv3NCZjJPI4IxjC2OGlweGay2z3SfWnKs";
+	
+	 @Autowired
+	    private transient MockMvc mvc;
+	    @MockBean
+	    private transient MovieService movieService;
+	    @InjectMocks
+	    private MovieController movieController;
+	    private Movie movie;
+	    private List<Movie> movieList;
+	    @Before
+	    public void setUp() {
+	        movieList = new ArrayList<>();
+	        movie = new Movie("12","KGF","Superhit",9,"wwww.kgf","awesome","itcuser");
+	        movieList.add(movie);
+	        movie = new Movie("13","KGF1","Superhit5",45,"wwww.kgf1","awesome1","itcuser1");
+	        movieList.add(movie);
+	    }
+	    @Test
+	    public void testSaveNewMovieSuccess() throws Exception {
+	        
+	        when(movieService.addMovie(movie)).thenReturn(movie);
+	        ResultActions result = mvc.perform(post("/movies"))
+	                .header("authorization", "Bearer "+token)
+	                .contentType(MediaType.APPLICATION_JSON)
+	                .accept(MediaType.APPLICATION_JSON).content(asJsonString(movie)));
+	        result.andExpect(status().isCreated()).andExpect(jsonPath("$.movieId").value("1202"))
+	                .andExpect(jsonPath("$.movieName").value("Dark Knight"))
+	                .andDo(print());
+	        verify(movieService, times(1)).saveMovie(any(Movie.class));
+	        verifyNoMoreInteractions(movieService);
+	    }
+	Collapse
+
+
+
+
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+
+}

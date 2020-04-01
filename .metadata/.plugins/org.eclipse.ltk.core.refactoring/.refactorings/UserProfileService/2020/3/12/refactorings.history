@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;RabbitMQConfig.java&apos; to &apos;AuthenticationService/src/main/java/com.moviecruiser.AuthenticationService.queue&apos;&#x0A;- Original project: &apos;UserProfileService&apos;&#x0A;- Destination element: &apos;AuthenticationService/src/main/java/com.moviecruiser.AuthenticationService.queue&apos;&#x0A;- Original element: &apos;com.moviecruiser.userprofile.queue.RabbitMQConfig.java&apos;" description="Copy compilation unit" destination="=AuthenticationService/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.moviecruiser.AuthenticationService.queue" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.moviecruiser.userprofile.queue{RabbitMQConfig.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1584255993859" units="1" version="1.0"/>
+</session>

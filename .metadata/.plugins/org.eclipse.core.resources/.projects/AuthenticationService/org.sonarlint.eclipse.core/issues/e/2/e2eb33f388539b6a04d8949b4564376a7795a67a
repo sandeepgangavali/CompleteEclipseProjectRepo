@@ -1,0 +1,11 @@
+
+…	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»¼ÇHÛpRMINORZ
+CODE_SMELL
+v
+java:S1128	"ERemove this unused import 'org.springframework.stereotype.Component'.(Ş÷Ñ¸ÿÿÿÿÿHÜpRMINORZ
+CODE_SMELL
+‘
+java:S1128"`Remove this unused import 'com.moviecruiser.AuthenticationService.models.AuthenticationRequest'.(ÇÊ‡›ÿÿÿÿÿHİpRMINORZ
+CODE_SMELL
+€	java:S116"URename this field "SECRET_KEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óˆ®HŞpRMINORZ
+CODE_SMELL

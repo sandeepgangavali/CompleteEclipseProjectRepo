@@ -1,0 +1,51 @@
+
+
+java:S3973£"GUse indentation to denote the code conditionally executed by this "if".(‘ÈÁ•8‘Âı±‘.HŠäRCRITICALZ
+CODE_SMELL
+ƒ	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ôş8œ¶ÉùŒ.H‹äRMINORZ
+CODE_SMELL
+	java:S100P"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ–òÙ8’÷÷ùŒ.HŒäRMINORZ
+CODE_SMELL
+„
+java:S3973"GUse indentation to denote the code conditionally executed by this "if".(œƒŞıÿÿÿÿ8‘Âı±‘.HäRCRITICALZ
+CODE_SMELL
+†	java:S100X"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇıÆëûÿÿÿÿ8’÷÷ùŒ.HäRMINORZ
+CODE_SMELL
+ˆ	java:S116-"WRename this field "vote_average" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½âŸÂÿÿÿÿÿHäRMINORZ
+CODE_SMELL
+‡	java:S1160"VRename this field "poster_path" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛçşÆùÿÿÿÿHäRMINORZ
+CODE_SMELL
+„
+java:S3973"GUse indentation to denote the code conditionally executed by this "if".(ßüÚëÿÿÿÿÿ8‘Âı±‘.H‘äRCRITICALZ
+CODE_SMELL
+ƒ	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ôş8œ¶ÉùŒ.H’äRMINORZ
+CODE_SMELL
+„
+java:S3973”"GUse indentation to denote the code conditionally executed by this "if".(ŠªîÄüÿÿÿÿ8‘Âı±‘.H“äRCRITICALZ
+CODE_SMELL
+„	java:S117\"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù·–»8’÷÷ùŒ.H”äRMINORZ
+CODE_SMELL
+‰
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed.(ÜÑã8‘Âı±‘.H•äRCRITICALZ
+CODE_SMELL
+„
+java:S3973™"GUse indentation to denote the code conditionally executed by this "if".(×„ó‡üÿÿÿÿ8‘Âı±‘.H–äRCRITICALZ
+CODE_SMELL
+
+java:S3973¨"GUse indentation to denote the code conditionally executed by this "if".(–Ää¿8‘Âı±‘.H—äRCRITICALZ
+CODE_SMELL
+u
+java:S1128"CRemove this unused import 'org.springframework.data.annotation.Id'.(áŠ¿¸ıÿÿÿÿH˜äRMINORZ
+CODE_SMELL
+„
+java:S3973Š"GUse indentation to denote the code conditionally executed by this "if".(Àæô„øÿÿÿÿ8‘Âı±‘.H™äRCRITICALZ
+CODE_SMELL
+‰	java:S117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹¥Àîúÿÿÿÿ8’÷÷ùŒ.HšäRMINORZ
+CODE_SMELL
+†	java:S100T"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹¥Àîúÿÿÿÿ8’÷÷ùŒ.H›äRMINORZ
+CODE_SMELL
+	java:S100\"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù·–»8’÷÷ùŒ.HœäRMINORZ
+CODE_SMELL
+j
+java:S1135"2Complete the task associated to this TODO comment.(ƒŠ® úÿÿÿÿ8œ¶ÉùŒ.HäRINFOZ
+CODE_SMELL

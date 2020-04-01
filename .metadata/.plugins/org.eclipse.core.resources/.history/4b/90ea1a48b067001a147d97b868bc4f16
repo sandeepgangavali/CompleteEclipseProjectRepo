@@ -1,0 +1,80 @@
+version : '3'
+services :
+  mongo:
+    image: mongo
+    restart: always
+    network_mode : host
+  Netflix-EurekaNamingService:
+  image: Eureka-image
+  build: Netflix-EurekaNamingService
+  ports:
+   - "8761:8761"
+  tty:
+    true
+  restart:
+    unless-stopped
+  node:
+    image: frontend-image
+    build: MovieCruiser
+    network_mode : host
+    restart : always
+    container_name : frontend-container
+    ports:
+      - "4200:4200" 
+    restart: always
+  mysql:
+    image: mysql:5.7
+    restart: always
+    network_mode : host
+    environment:
+      MYSQL_DATABASE: Movie_Cruiser
+      MYSQL_ROOT_PASSWORD: very_strong_password
+      MYSQL_USER: sandeep
+      MYSQL_PASSWORD: sandeep
+    ports:
+      - 3306:3306
+  MovieCruiserService:
+    image : moviecruiserservice-image
+    build : MovieCruiserService
+    restart : always
+    network_mode : host
+    container_name : moviecruiserservice-container
+    depends_on:
+      - mongo
+    ports :
+      - 8080:8080
+    expose:
+       - 8080
+  AuthenticationService:
+    image : authenticationservice-image
+    build : AuthenticationService
+    restart : always
+    network_mode : host
+    container_name : authenticationservice-container
+    depends_on:
+      - mongo
+    ports :
+      - 8081:8081
+    expose:
+       - 8081
+  UserProfileService:
+    image : userprofileservice-image
+    build : UserProfileService
+    restart : always
+    network_mode : host
+    container_name : userprofileservice-container
+    depends_on:
+      - mysql
+    ports :
+      - 8082:8082
+    expose:
+       - 8082
+  rabbit1:
+    image: "rabbitmq:3-management"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    labels:
+      NAME: "favorite"
+    hostname: localhost
+    network_mode: host

@@ -1,0 +1,16 @@
+
+†	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ØÎ¯™H¢íRMINORZ
+CODE_SMELL
+‚
+java:S1128"PRemove this unused import 'org.springframework.web.bind.annotation.RequestBody'.(â­½ÀıÿÿÿÿH£íRMINORZ
+CODE_SMELL
+j
+java:S1854"=Remove this useless assignment to local variable "saveduser".(ÔÄü‹H¤íRMAJORZ
+CODE_SMELL
+j	java:S106"9Replace this use of System.out or System.err by a logger.(Ö›ŠúÿÿÿÿH¥íRMAJORZ
+CODE_SMELL
+e	java:S106"9Replace this use of System.out or System.err by a logger.(Í¡ ÕH¦íRMAJORZ
+CODE_SMELL
+[
+java:S1481".Remove this unused "saveduser" local variable.(ÔÄü‹H§íRMINORZ
+CODE_SMELL

@@ -1,0 +1,5 @@
+package com.stackroute.moviecruiserapp.exceptions;
+
+public class MovieNotFoundException {
+
+}

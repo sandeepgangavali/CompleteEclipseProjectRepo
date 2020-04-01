@@ -1,0 +1,13 @@
+
+Q
+java:S1128	"Remove this duplicated import.(èîí8ƒ ö¡.H´uRMINORZ
+CODE_SMELL
+
+java:S1128"NRemove this unused import 'com.fasterxml.jackson.annotation.JsonIdentityInfo'.(—éÑğ8µ—úç.HµuRMINORZ
+CODE_SMELL
+Q
+java:S1128"Remove this duplicated import.(—éÑğ8ƒ ö¡.H¶uRMINORZ
+CODE_SMELL
+ƒ
+java:S1128"PRemove this unused import 'com.fasterxml.jackson.annotation.ObjectIdGenerators'.(èîí8µ—úç.H·uRMINORZ
+CODE_SMELL

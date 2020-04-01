@@ -1,0 +1,9 @@
+
+Ж
+java:S1128	"SRemove this unused import 'org.springframework.web.bind.annotation.RequestMapping'.(цїњл8СёіЪН.H∆rRMINORZ
+CODE_SMELL
+Z
+java:S1452"&Remove usage of generic wildcard type.(янцвь€€€€H«rRCRITICALZ
+CODE_SMELL
+w
+java:S4684"@Replace this persistent entity with a simple POJO or DTO object.(янцвь€€€€H»rRCRITICALZVULNERABILITY

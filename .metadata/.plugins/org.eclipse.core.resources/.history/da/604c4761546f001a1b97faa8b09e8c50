@@ -1,0 +1,72 @@
+package com.stackroute.moviecruiserapp.repository;
+
+
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.junit4.SpringRunner;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.when;
+
+import com.stackroute.moviecruiserapp.domain.Movie;
+
+
+
+
+@RunWith(SpringRunner.class)
+@DataMongoTest
+public class MovieRepositoryTest {
+	
+	 @Mock
+	    MovieRepository movieRepository;
+	 
+	 
+	    Movie movie1,movie2;
+	    List<Movie> list= null;
+
+	    @Before
+	    public void setUp()
+	    {
+	    	MockitoAnnotations.initMocks(this);
+	        movie1 = new Movie("12","KGF","Superhit",9,"wwww.kgf","awesome","itcuser");
+	        movie2 = new Movie("13","KGF1","Superhit5",45,"wwww.kgf1","awesome1","itcuser1");
+	        list = new ArrayList<>();
+	        list.add(movie1);
+	        list.add(movie2);
+	    } 
+	    
+	    
+//	    @After
+//	    public void tearDown(){
+//
+//	    	movieRepository.deleteAll();
+//	    }
+	    
+	    
+	    
+	    @Test
+	    public void testSaveUser(){
+	    	movieRepository.save(movie1);
+	    	List<Movie> fetchMovie = movieRepository.findByUsername("itcuser");
+	    	Assert.assertEquals("awesome",fetchMovie.get(0).getComments());
+	    	
+	    	}
+	    
+	    
+	    
+
+
+	    
+}

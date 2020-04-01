@@ -1,0 +1,12 @@
+
+”
+java:S14880"bImmediately return this expression instead of assigning it to the temporary variable "savedMovie".(ˆ„œµúÿÿÿÿHãéRMINORZ
+CODE_SMELL
+Ó
+java:S1130&"™Remove the declaration of thrown exception 'com.stackroute.moviecruiserapp.exceptions.MovieNotFoundException', as it cannot be thrown from method's body.(»›œÜÿÿÿÿÿ8ñ¨¡©’.HÊéRMINORZ
+CODE_SMELL
+\
+java:S3655/"6Call "movieup.isPresent()" before accessing the value.(ÑŽõýHâéRMAJORZBUG
+”
+java:S1488"bImmediately return this expression instead of assigning it to the temporary variable "savedmovie".(àç™ÁùÿÿÿÿH½éRMINORZ
+CODE_SMELL
